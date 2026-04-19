@@ -1,0 +1,21 @@
+{
+	"name": "datalakesinkapidata",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "df_linked_service_to_datlake",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "DimAirports.json",
+				"folderPath": "githubapi",
+				"fileSystem": "bronze"
+			}
+		},
+		"schema": {}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,21 @@
+{
+	"name": "ds_fact_source",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "df_linked_service_to_datlake",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "sqldata",
+				"fileSystem": "bronze"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
